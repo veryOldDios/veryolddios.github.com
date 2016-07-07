@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <title>老衲的个人网站</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="shortcut icon" href="image/favicon.ico">
+<link href="css/base.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
 <style>
 body {
 	background: #eee url(images/bodybg.png);
@@ -314,8 +317,8 @@ body {
 
 <div id="menu-wrap">
 	<ul id="menu">
-		<li><a href="https://veryolddios.github.io/" target="_parent">首 页</a></li>
-		<li> <a href="">作品</a>
+		<li><a href="javascript:mainpage()" target="_parent">首 页</a></li>
+		<li> <a href="javascript:projectpage()">作品</a>
 			<ul>
 				<li> <a href="">PC软件</a>
 					<ul>
@@ -334,36 +337,13 @@ body {
 				</li>
 			</ul>
 		</li>
-		<li><a href="">自我介绍</a></li>
+		<li><a href="javascript:aboumepage()">自我介绍</a></li>
 	</ul>
 </div>
 
-<script src="js/jquery-1.8.3.min.js"></script>
-<script>
-$(function() {
-	if ($.browser.msie && $.browser.version.substr(0,1) < 7){
-	$('li').has('ul').mouseover(function(){
-		$(this).children('ul').css('visibility','visible');
-		}).mouseout(function(){
-		$(this).children('ul').css('visibility','hidden');
-		});
-	}
-
-	/* Mobile */
-	$('#menu-wrap').prepend('<div id="menu-trigger">Menu</div>');
-	$("#menu-trigger").on('click', function(){
-		$("#menu").slideToggle();
-	});
-
-	// iPad
-	var isiPad = navigator.userAgent.match(/iPad/i) != null;
-	if (isiPad) $('#menu ul').addClass('no-transition');
-});
-</script>
 <br>
 <!--轮播图 开始 -->
-<div class="main_banner">
-
+<div id="main" class="main_banner">
 	<div class="main_banner_wrap">
 		<canvas id="myCanvas" width="150" height="150"></canvas>
 		<div class="main_banner_box" id="m_box">
@@ -412,9 +392,85 @@ $(function() {
 	
 </div>
 <!--轮播图 结束 -->
-
+<div id="project"><ul class="box">
+	<li>
+		<div class="top"></div>
+		<div class="left"></div>
+		<div class="bottom"></div>
+		<div class="right"></div>
+		<img src="picture/1.jpg" alt="">
+		<p>李易峰</p>
+	</li>
+	<li>
+		<div class="top"></div>
+		<div class="left"></div>
+		<div class="bottom"></div>
+		<div class="right"></div>
+		<img src="picture/2.jpg" alt="">
+		<p>李易峰</p>
+	</li>
+	<li>
+		<div class="top"></div>
+		<div class="left"></div>
+		<div class="bottom"></div>
+		<div class="right"></div>
+		<img src="picture/3.jpg" alt="">
+		<p>李易峰</p>
+	</li>	
+</ul></div>
+<div id="aboume"><h3>我是老衲<h3></div>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+$(function() {
+	if ($.browser.msie && $.browser.version.substr(0,1) < 7){
+	$('li').has('ul').mouseover(function(){
+		$(this).children('ul').css('visibility','visible');
+		}).mouseout(function(){
+		$(this).children('ul').css('visibility','hidden');
+		});
+	}
+
+	/* Mobile */
+	$('#menu-wrap').prepend('<div id="menu-trigger">Menu</div>');
+	$("#menu-trigger").on('click', function(){
+		$("#menu").slideToggle();
+	});
+
+	// iPad
+	var isiPad = navigator.userAgent.match(/iPad/i) != null;
+	if (isiPad) $('#menu ul').addClass('no-transition');
+});
+</script>
+<script>
+function mainpage(){
+	var main=document.getElementById("main");
+	var project=document.getElementById("project");
+	var aboume=document.getElementById("aboume");
+	main.style.display="block";
+	project.style.display="none";
+	aboume.style.display="none";
+}
+function projectpage(){
+	var main=document.getElementById("main");
+	var project=document.getElementById("project");
+	var aboume=document.getElementById("aboume");
+	main.style.display="none";
+	project.style.display="block";
+	aboume.style.display="none";
+}
+function aboumepage(){
+	var main=document.getElementById("main");
+	var project=document.getElementById("project");
+	var aboume=document.getElementById("aboume");
+	main.style.display="none";
+	project.style.display="none";
+	aboume.style.display="block";
+}
+window.onload=mainpage();
+</script>
 </body>
 </html>

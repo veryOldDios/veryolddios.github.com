@@ -1,0 +1,66 @@
+﻿@CHARSET "UTF-8";
+.box{
+	width: 1200px;
+	margin: 20px auto 0px;
+	overflow: hidden;
+}
+.box li{
+	width: 380px;
+	height: 200px;
+	overflow: hidden;
+	margin: 10px;
+	float: left;
+	position: relative;
+	cursor: pointer;
+	background: #f6f6f6;
+}
+.top{
+	position: absolute;
+	z-index:1;
+	height: 5px;
+	width: 0px;
+	top: 0px;
+	width: 0px;
+}
+.bottom{
+	position: absolute;
+	z-index:1;
+	height: 5px;
+	width: 0%;
+	bottom: 0px;
+	right: 0px;
+}
+.left{
+	height: 0;
+	position: absolute;
+	left: 0px;
+	width: 5px;
+}
+.right{
+	height: 0;
+	position: absolute;
+	right: 0px;
+	width: 5px;
+	bottom: 0px;
+}
+.box li img{
+	width: 370px;
+	height: 190px;
+	position: absolute;
+	z-index: 1;
+	top: 5px;
+	left: 5px;
+}
+.box li p{
+	position: absolute;
+	z-index: 2;
+	background: rgba(2,179,191,0.5);
+	height: 0px;
+	line-height: 40px;
+	width: 370px;
+	text-align: center;
+	color: #fff;
+	bottom: 5px;
+	left: 5px;
+}
+
