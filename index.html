@@ -24,7 +24,7 @@ body {
 	list-style: none;
 }
 #menu {
-	width: 960px;
+	width: 1180px;
 	margin: 60px auto;
 	border: 1px solid #222;
 	background-color: #111;
@@ -314,10 +314,10 @@ body {
 
 <body>
 
-<h1 style="margin: 40px; font: 32px Microsoft Yahei; text-align: center;">老衲的个人网站</h1>
+<h1 style="margin: 40px; font: 32px Microsoft Yahei; text-align: left;">老衲的个人网站</h1>
 
-<div id="menu-wrap">
-	<ul id="menu">
+<div id="menu-wrap" >
+	<ul id="menu"  style="margin-bottom: 0px;">
 		<li><a href="javascript:mainpage()" target="_parent">首 页</a></li>
 		<li> <a href="javascript:projectpage()">作品</a>
 			<ul>
@@ -568,6 +568,7 @@ function aboumepage(){
 	main.style.display="none";
 	project.style.display="none";
 	aboume.style.display="block";
+	document.getElementById("li1").click();
 }
 window.onload=function(){ 
 mainpage();

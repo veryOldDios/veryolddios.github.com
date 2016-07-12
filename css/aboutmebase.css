@@ -27,9 +27,9 @@ hr {height:0;}
 
 
 /*语音通话*/
-.box10{background:#404344;padding:0px;height:610px;}
+.box10{background:#00000000;padding:0px;height:410px;}
 .voice_2{width:1180px;position:relative;left:50%;margin-left:-590px;}
-.voice_2 ul li{float:left;display:inline;height:610px;color:#fff;cursor:pointer;position:relative;}
+.voice_2 ul li{float:left;display:inline;height:410px;color:#fff;cursor:pointer;position:relative;}
 .voice_2 ul li.li1{background:#4a9ebd}
 .voice_2 ul li.li2{background:#4abdb9}
 .voice_2 ul li.li3{background:#90d73d}
